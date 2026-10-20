@@ -1,0 +1,42 @@
+{
+  "name": "delivery-fee-calculator-node",
+  "version": "1.0.0",
+  "description": "Delivery fee calculator API (Fujitsu trial task) in Node.js + Express",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "scripts": {
+    "dev": "node --env-file=.env --watch src/index.ts",
+    "start": "node --env-file=.env src/index.ts",
+    "typecheck": "tsc",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "npm run typecheck && npm run lint && npm run format:check && npm test",
+    "openapi": "node scripts/openapi.ts"
+  },
+  "dependencies": {
+    "express": "^5.3.0",
+    "fast-xml-parser": "^5.11.2",
+    "node-cron": "^4.6.0",
+    "pg": "^8.23.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26",
+    "@types/pg": "^8.23.1",
+    "eslint": "^10.13.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.9.10",
+    "typescript": "~6.0",
+    "typescript-eslint": "^8.71.2",
+    "vitest": "^5.0.5"
+  },
+  "engines": {
+    "node": ">=26"
+  }
+}
